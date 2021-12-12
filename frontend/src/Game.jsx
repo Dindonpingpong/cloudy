@@ -102,7 +102,7 @@ export default function Game({ login }) {
                     users.map((user, key) => {
                         const { name, riddle } = user;
 
-                        if (login === name.toLowerCase()) {
+                        if (login === name) {
                             return (
                                 <PlayerCard key={key} index={key} login={login} isMe={true} riddle={riddle} />
                             )

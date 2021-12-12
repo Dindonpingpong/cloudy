@@ -2,6 +2,9 @@ body {
   background: #000
 }
 
+.card-title {
+  text-transform: capitalize; 
+}
 
 .forms-inputs {
   position: relative

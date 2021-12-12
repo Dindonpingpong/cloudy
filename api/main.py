@@ -34,6 +34,6 @@ def get_users():
 
 @app.post("/users")
 def add_user(user: User):
-    users[user.name] = user.riddle
+    users[user.name.lower()] = user.riddle
 
     return [{ "name": key, "riddle": users[key] } for key in users]
