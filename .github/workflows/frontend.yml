@@ -22,16 +22,15 @@ jobs:
         node-version: 13.x
     
     - name: Install NPM packages
-      run: npm ci
-      with:
-        appdir: "frontend"
+      working-directory: ./frontend
+      run: yarn install
       
     - name: Build project
-      run: npm run build
-      with:
-        appdir: "frontend"
-    
+      working-directory: ./frontend
+      run: yarn run build
+
     - name: Upload production-ready build files
+      working-directory: ./frontend
       uses: actions/upload-artifact@v2
       with:
         name: production-files
