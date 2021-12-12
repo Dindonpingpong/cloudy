@@ -1,8 +1,28 @@
 import React from 'react'
 
+const API_URL = "https://cloudy-bread.herokuapp.com";
+
+function fetchLogin(login, riddle) {
+    const request = new Request(`${API_URL}/users`, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({
+            "name": login,
+            "riddle": riddle
+        })
+    })
+
+    return fetch(request)
+}
+
 export default function Login({ setIsLogged, setLogin, login}) {
-    const log = () => {
+    const log = async () => {
         if (login !== "") {
+            await fetchLogin(login, "");
             setIsLogged(true);
             setLogin(login);
             sessionStorage.setItem('login', login);

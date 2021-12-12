@@ -3,7 +3,7 @@ import { Button, Card, CardTitle, Col, Container, Input, InputGroup, InputGroupT
 
 const API_URL = "https://cloudy-bread.herokuapp.com";
 
-async function getUsers() {
+function getUsers() {
     const request = new Request(`${API_URL}/users`, {
         method: 'GET',
         mode: 'cors',
@@ -15,7 +15,7 @@ async function getUsers() {
     return fetch(request)
 }
 
-async function setRiddle(login, riddle) {
+function setRiddle(login, riddle) {
     const request = new Request(`${API_URL}/users`, {
         method: 'POST',
         mode: 'cors',
