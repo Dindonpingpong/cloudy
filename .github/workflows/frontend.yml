@@ -1,8 +1,9 @@
 name: Build & deploy front
 
 on:
-  branches:
-      - main
+  push:
+    branches:
+        - main
     paths:
       - frontend/**
 
