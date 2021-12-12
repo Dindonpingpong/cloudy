@@ -23,16 +23,20 @@ jobs:
     
     - name: Install NPM packages
       run: npm ci
+      with:
+        appdir: "frontend"
       
     - name: Build project
       run: npm run build
+      with:
+        appdir: "frontend"
     
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
       with:
         name: production-files
         path: ./build
-        appdir: "frontend"
+
 
   deploy:
     name: Deploy
@@ -45,7 +49,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: production-files
-        path: ./frontend/build
+        path: .//build
 
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
