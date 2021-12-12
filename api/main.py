@@ -16,10 +16,10 @@ def read_root():
 
 @app.get("/users")
 def get_users():
-    return users
+    return [{ "name": key, "riddle": users[key] } for key in users]
 
 @app.post("/users")
 def add_user(user: User):
-    users[user.name] = user
+    users[user.name] = user.riddle
 
-    return users.items()
+    return [{ "name": key, "riddle": users[key] } for key in users]
