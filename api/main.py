@@ -12,7 +12,7 @@ users = {}
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "Nya"}
 
 @app.get("/users")
 def get_users():
