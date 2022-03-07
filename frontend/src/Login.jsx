@@ -38,7 +38,7 @@ export default function Login({ setIsLogged, setLogin, login}) {
                             <div className="forms-inputs mb-3"> <span>Login</span>
                                 <input type="text" onChange={(e) => setLogin(e.target.value)}/>
                             </div>
-                            <div className="mb-3"> <button className="btn btn-dark w-100" onClick={log}>Login</button> </div>
+                            <div className="mb-3"> <button className="btn btn-dark w-100" onClick={log}>Sign up</button> </div>
                         </div>
                     </div>
                 </div>
