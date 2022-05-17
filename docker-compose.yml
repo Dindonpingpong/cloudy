@@ -1,0 +1,12 @@
+version: "3"
+services:
+  api:
+    build: ./api
+    ports:
+      - "3000:3000"
+    container_name: api_cloudy
+  client:
+    build: ./frontend
+    ports:
+      - "80:80"
+    container_name: front_coudy
