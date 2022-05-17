@@ -35,10 +35,10 @@ export default function Login({ setIsLogged, setLogin, login}) {
                 <div className="col-md-3">
                     <div className="card px-5 py-5" id="form1">
                         <div className="form-data">
-                            <div className="forms-inputs mb-3"> <span>Username</span>
+                            <div className="forms-inputs mb-3"> <span>Login</span>
                                 <input type="text" onChange={(e) => setLogin(e.target.value)}/>
                             </div>
-                            <div className="mb-3"> <button className="btn btn-dark w-100" onClick={log}>Login</button> </div>
+                            <div className="mb-3"> <button className="btn btn-dark w-100" onClick={log}>Sign up</button> </div>
                         </div>
                     </div>
                 </div>
